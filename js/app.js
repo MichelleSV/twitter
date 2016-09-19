@@ -1,11 +1,18 @@
 window.addEventListener("load", function() {
 	var boton = document.getElementById("btn-agregar");
-	boton.addEventListener("click", function() {
+	boton.addEventListener("click", function(e) {
+		e.preventDefault();
 		var tweet = document.getElementById("tweet").value;
+		var nuevoTweet = document.createElement("div");
+		nuevoTweet.innerText = tweet;
+		var tweets = document.getElementById("texto";)
+
+
+
 		newTweet(tweet);
 	});
 	function newTweet (tweet) {
-        var nuevoTweet = document.createElement("div");
+
         var contenedor = document.getElementById("contenedor");
         nuevoTweet.innerText = tweet;
 		 if(!contenedor.childNodes[0]){
