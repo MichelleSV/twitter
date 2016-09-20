@@ -13,6 +13,7 @@ body{
 	margin: 5px 0;
 	background-color: deepskyblue;
 	color: black;
+	word-wrap:break-word;
 }
 #btn-agregar{
 	background-color: midnightblue;
@@ -20,4 +21,7 @@ body{
 	border-radius: 15px;
 	padding: 10px 20px;
 	border: 0px;
+}
+textarea{
+	overflow: hidden;
 }
