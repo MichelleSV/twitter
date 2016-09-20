@@ -44,4 +44,10 @@ window.addEventListener("load", function() {
 			contadorDeNumbers.style.color="black";
 		}
 	}
+	var textarea = document.getElementById("tweet");
+	var heightLimit = 1000;
+	textarea.oninput = function() {
+	textarea.style.height = "";
+	textarea.style.height = Math.min(textarea.scrollHeight, heightLimit) + "px";
+	};	
 });
