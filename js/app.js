@@ -1,18 +1,11 @@
 window.addEventListener("load", function() {
 	var boton = document.getElementById("btn-agregar");
-	boton.addEventListener("click", function(e) {
-		e.preventDefault();
+	boton.addEventListener("click", function() {
 		var tweet = document.getElementById("tweet").value;
-		var nuevoTweet = document.createElement("div");
-		nuevoTweet.innerText = tweet;
-		var tweets = document.getElementById("texto";)
-
-
-
 		newTweet(tweet);
 	});
 	function newTweet (tweet) {
-
+        var nuevoTweet = document.createElement("div");
         var contenedor = document.getElementById("contenedor");
         nuevoTweet.innerText = tweet;
 		 if(!contenedor.childNodes[0]){
@@ -20,5 +13,17 @@ window.addEventListener("load", function() {
         } else {
 			contenedor.insertBefore(nuevoTweet,contenedor.childNodes[0]);
         }
+	}
+	tweet.addEventListener("keydown",function(){
+		contador(tweet);
+	});
+	function contador(tweet){
+		boton.disabled=false;
+		var limite = 140;
+		var longitud = document.getElementById("tweet").value.length;
+		document.getElementById("contadorNumeros").innerHTML= limite-longitud;
+		if(longitud=>limite){
+			boton.disabled=true;
+		}
 	}
 });
