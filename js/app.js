@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
 	});
 	function newTweet (tweet) {
         var nuevoTweet = document.createElement("div");
-        var contenedor = document.getElementById("tweetPrimero");
+        var contenedor = document.getElementById("contenedorTweets");
 		nuevoTweet.innerText = tweet;
 		if(tweet == ""){
 			boton.disabled=true;

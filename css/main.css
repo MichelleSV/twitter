@@ -9,32 +9,18 @@ h1{
 	font-size: 50px;
 	padding: 20px 0;
 }
-#contenedor div{
-	border-radius: 15px;
-	width: 500px;
-	height: auto;
-	padding: 15px 0;
-	margin-top: 5px;
-	margin: 0 auto;
-	background-color: white;
-	color: black;
-	word-wrap:break-word;
-	font-family: monospace;
-	font-size: 15px;
-}
-#tweetPrimero{
-	
-}
 h2{
 	color: coral;
 	font-family: fantasy;
 	font-size: 50px;
 }
-#contenedor{
-	background-color: black;
-	width: 60%;
-	margin: 0 auto;
-	padding: 10px 0 40px 0;
+textarea{
+	overflow: hidden;
+	border-radius: 15px;
+	width: 65%;
+	border: 5px solid black;
+	font-size: 18px;
+	font-family: monospace;
 }
 #btn-agregar{
 	background-color:palegreen;
@@ -46,9 +32,29 @@ h2{
 	padding: 10px 80px;
 	margin-bottom: 40px;
 }
-textarea{
-	overflow: hidden;
+#contenedor{
+	background-color: black;
+	width: 60%;
+	margin: 5px auto;
+	padding: 10px 0 40px 0;
+}
+#primerTweet{
 	border-radius: 15px;
-	width: 500px;
-	border: 5px solid black;
+	width: 70%;
+	height: auto;
+	padding: 15px 0;
+	background-color: white;
+	color: black;
+	font-family: monospace;
+	font-size: 15px;
+	margin: 10px auto;
+}
+#contenedorTweets div{
+	background-color: white;
+	color:black;
+	width: 70%;
+	border-radius: 15px;
+	padding: 15px 0;
+	word-wrap:break-word;
+	margin: 10px auto;
 }
