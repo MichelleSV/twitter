@@ -8,8 +8,18 @@ window.addEventListener("load", function() {
 		newTweet(tweet);
 	});
 	function newTweet (tweet) {
-        var nuevoTweet = document.createElement("div");
-        var contenedor = document.getElementById("contenedorTweets");
+        var nuevoTweet = document.createElement("div"),
+			contenedor = document.getElementById("contenedorTweets"),
+			nuevaHora = document.createElement("span");
+		var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+        if(minuto < 10){
+            minuto = "0" + minuto;
+        }
+		nuevoTweet.appendChild(nuevaHora);
+		var horaTotal = hora + ":" + minuto;
+        nuevaHora.innerText = horaTotal;
 		nuevoTweet.innerText = tweet;
 		if(tweet == ""){
 			boton.disabled=true;
@@ -44,10 +54,4 @@ window.addEventListener("load", function() {
 			contadorDeNumbers.style.color="black";
 		}
 	}
-	var textarea = document.getElementById("tweet");
-	var heightLimit = 1000;
-	textarea.oninput = function() {
-	textarea.style.height = "";
-	textarea.style.height = Math.min(textarea.scrollHeight, heightLimit) + "px";
-	};	
 });

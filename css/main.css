@@ -58,3 +58,7 @@ textarea{
 	word-wrap:break-word;
 	margin: 10px auto;
 }
+span{
+	color: red;
+	background-color: white;
+}
