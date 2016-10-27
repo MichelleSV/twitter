@@ -2,6 +2,7 @@ var cargarPagina = function() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
 	}
+	$("#tweet").focus();
 };
 var funcionExito = function(posicion) {
 	var lat = posicion.coords.latitude;
