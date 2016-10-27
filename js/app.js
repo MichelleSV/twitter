@@ -4,39 +4,42 @@ window.addEventListener("load", function() {
 		var tweet = document.getElementById("tweet").value;
 		var contadorDeNumbers = document.getElementById("contadorNumeros");
 		document.getElementById("tweet").value = "";
-        contadorDeNumbers.textContent = "140";
+		contadorDeNumbers.textContent = "140";
 		newTweet(tweet);
 	});
+	var contadorDeNumbers;
 	function newTweet (tweet) {
-        var nuevoTweet = document.createElement("div"),
+		var nuevoTweet = document.createElement("div"),
 			contenedor = document.getElementById("contenedorTweets"),
-			nuevaHora = document.createElement("span");
+			nuevaHora = document.createElement("p");
 		var fecha = new Date();
-        var hora = fecha.getHours();
-        var minuto = fecha.getMinutes();
-        if(minuto < 10){
-            minuto = "0" + minuto;
-        }
-		nuevoTweet.appendChild(nuevaHora);
+		var hora = fecha.getHours();
+		var minuto = fecha.getMinutes();
+		if(minuto < 10){
+			minuto = "0" + minuto;
+		}
 		var horaTotal = hora + ":" + minuto;
-        nuevaHora.innerText = horaTotal;
+		nuevaHora.textContent= "A las "+horaTotal+" en "+ window.localStorage.getItem("direccion").substring(0,window.localStorage.getItem("direccion").length-12);
 		nuevoTweet.innerText = tweet;
+		nuevaHora.classList.add("horas");
+		nuevoTweet.appendChild(nuevaHora);
 		if(tweet == ""){
 			boton.disabled=true;
 		}
-		 else if(!contenedor.childNodes[0]){
-            contenedor.appendChild(nuevoTweet);
-        } else {
+		else if(!contenedor.childNodes[0]){
+			contenedor.appendChild(nuevoTweet);
+		} else {
 			contenedor.insertBefore(nuevoTweet,contenedor.childNodes[0]);
-		}	
+		}
+	contadorDeNumbers.style.color="black";
 	}
 	tweet.addEventListener("keydown",function(){
 		contador(tweet);
 	});
 	function contador(tweet){
 		boton.disabled=false;
+		contadorDeNumbers=document.getElementById("contadorNumeros");
 		var limite = 140;
-		var contadorDeNumbers=document.getElementById("contadorNumeros");
 		var longitud = document.getElementById("tweet").value.length;
 		var count = document.getElementById("contadorNumeros").innerHTML= limite-longitud;
 		if(longitud>=140){

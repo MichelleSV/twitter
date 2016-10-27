@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Delius|Galada|Luckiest+Guy');
+*{
+	box-sizing: border-box;
+}
+html {
+	overflow: auto;
+}
 body{
 	text-align: center;
 	background-image: url(../img/fondo.jpg);
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
+	padding: 30px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 h1{
 	background-color: black;
 	color: coral;
-	font-family: fantasy;
+	font-family: Galada;
 	font-size: 50px;
 	padding: 20px 0;
 }
 h2{
 	color: coral;
-	font-family: fantasy;
+	font-family: Galada;
 	font-size: 50px;
 }
 textarea{
@@ -20,16 +35,28 @@ textarea{
 	width: 65%;
 	border: 5px solid black;
 	font-size: 18px;
-	font-family: monospace;
+	font-family: Delius;
+	padding: 15px;
+}
+#contadorNumeros{
+	font-size: 20px;
+	font-family: Delius;
+	background-color: oldlace;
+	padding: 10px;
+	width: 70px;
+	margin: 0 auto 20px auto;
+	border-radius: 5px;
+	border: 3px solid black;
+	display: inline-block;
 }
 #btn-agregar{
 	background-color:palegreen;
 	color: black;
-	font-family: fantasy;
+	font-family: Luckiest Guy;
 	font-size: 20px;
-	border: 4px solid black;
+	border: 3px solid black;
 	border-radius: 15px;
-	padding: 10px 80px;
+	padding: 10px 40px;
 	margin-bottom: 40px;
 }
 #contenedor{
@@ -37,28 +64,52 @@ textarea{
 	width: 60%;
 	margin: 5px auto;
 	padding: 10px 0 40px 0;
+	background: rgba(0, 0, 0, 0.8);
 }
 #primerTweet{
-	border-radius: 15px;
+	border-radius: 5px;
 	width: 70%;
 	height: auto;
-	padding: 15px 0;
+	padding: 15px;
 	background-color: white;
 	color: black;
-	font-family: monospace;
-	font-size: 15px;
+	font-family: Delius;
+	font-size: 18px;
 	margin: 10px auto;
+	text-align: justify;
 }
 #contenedorTweets div{
 	background-color: white;
 	color:black;
+	font-family: Delius;
 	width: 70%;
-	border-radius: 15px;
-	padding: 15px 0;
+	border-radius: 5px;
+	padding: 15px;
 	word-wrap:break-word;
 	margin: 10px auto;
+	text-align: justify;
+	font-size: 18px;
 }
-span{
-	color: red;
-	background-color: white;
+.horas{
+	width: 100%;
+	text-align: right;
+	margin:10px 0;
+	color: coral;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.4);
 }
