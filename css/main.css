@@ -113,3 +113,70 @@ textarea{
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(0,0,0,0.4);
 }
+@media screen and (max-width : 479px) {
+	body{
+		position: static;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 0;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	::-webkit-scrollbar {
+		width: 0;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow:0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		background-color: transparent;
+		-webkit-box-shadow: 0;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background-color: transparent;
+	}
+	#contenedor{
+		width: 90%;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	textarea{
+		width: 85%;
+		font-size: 16px;
+		border: 3px solid black;
+	}
+	h1{
+		font-size: 30px;
+		padding: 10px 0;
+	}
+	#contenedorTweets div{
+		width: 85%;
+		font-size: 16px;
+	}
+	#primerTweet{
+		width: 85%;
+		font-size: 16px;
+	}
+	h2{
+		font-size: 30px;
+	}
+	#contadorNumeros{
+		font-size: 18px;
+		padding: 8px;
+		width: 70px;
+		margin: 0 auto 20px auto;
+		border-radius: 5px;
+		border: 2px solid black;
+	}
+	#btn-agregar{
+		font-size: 18px;
+		border: 2px solid black;
+		padding: 8px 28px;
+		border: 2px solid black;
+	}
+}
