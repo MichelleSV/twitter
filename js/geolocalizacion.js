@@ -16,16 +16,16 @@ var funcionExito = function(posicion) {
 				dir = resultado[0].formatted_address;
 			}
 			else{
-				dir = "No se ha podido obtener ninguna dirección en esas coordenadas.";
+				dir = "";
 			}
 		}
 		else{
-			dir = "El Servicio de Codificación Geográfica ha fallado con el siguiente error: " + estado;
+			dir = "";
 		}
 		window.localStorage.setItem("direccion",dir)
 	});
 }
 var funcionError = function (error) {
-	alert("Tenemos un problema con encontrar tu ubicación");
+	alert("Tenemos un problema con encontrar tu ubicación, verifica si está encendida");
 }
 $(document).ready(cargarPagina);

@@ -19,7 +19,12 @@ window.addEventListener("load", function() {
 			minuto = "0" + minuto;
 		}
 		var horaTotal = hora + ":" + minuto;
-		nuevaHora.textContent= "A las "+horaTotal+" en "+ window.localStorage.getItem("direccion").substring(0,window.localStorage.getItem("direccion").length-12);
+		if (window.localStorage.getItem("direccion").length==0){
+			nuevaHora.textContent= "A las "+horaTotal;
+		}
+		else{
+			nuevaHora.textContent= "A las "+horaTotal+" en "+ window.localStorage.getItem("direccion").substring(0,window.localStorage.getItem("direccion").length-12);
+		}
 		nuevoTweet.innerText = tweet;
 		nuevaHora.classList.add("horas");
 		nuevoTweet.appendChild(nuevaHora);
