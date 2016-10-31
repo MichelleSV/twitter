@@ -8,16 +8,11 @@ html {
 body{
 	text-align: center;
 	background-image: url(../img/fondo.jpg);
-	position: absolute;
-		background-attachment: fixed;
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	top: 20px;
-	left: 20px;
-	bottom: 20px;
-	right: 20px;
-	padding: 30px;
+	width: 99%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -157,6 +152,7 @@ textarea{
 	h1{
 		font-size: 30px;
 		padding: 10px 0;
+		width: 97%;
 	}
 	#contenedorTweets div{
 		width: 85%;
